@@ -1,0 +1,16 @@
+{
+  "name": "mobile",
+  "version": "0.0.0",
+  "description": "",
+  "devDependencies": {
+    "connect": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "readmeFilename": "readme.md"
+}
