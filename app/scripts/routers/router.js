@@ -19,13 +19,19 @@ define([
     root: function() {
       console.log("I'm the homepage! Yikes!");
 
-      this.ExampleModel = new ExampleModel({
-        title: "This is my first Backbone project",
-        paragraph: "I'm a JavaScript superstar, don't you think?!"
-      });
+      var self = this;
 
-      this.IndexView = new IndexView({model: this.ExampleModel});
-      this.IndexView.render();
+      self.ExampleModel = new ExampleModel();
+
+      self.ExampleModel.fetch({
+        error: function() {
+            Common.TooltipView.show();
+        },
+        success: function() {
+          self.IndexView = new IndexView({model: self.ExampleModel});
+          self.IndexView.render();
+        }
+      });
     }
 
   });

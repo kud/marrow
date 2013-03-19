@@ -6,6 +6,6 @@ define([
 ], function( Backbone ) {
 
   return Backbone.Model.extend({
-    urlRoot: ''
+    urlRoot: '/api/model.json'
   });
 });
