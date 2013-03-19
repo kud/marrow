@@ -7,7 +7,7 @@ My project
 
 http://nodejs.org/download/
 
-and
+### NPM Packages
 
 ```
 $ npm install
