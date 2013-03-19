@@ -15,7 +15,7 @@ define([
     },
 
     root: function() {
-      console.log("I'm on the homepage! Yikes!");
+      console.log("I'm the homepage! Yikes!");
     }
 
   });
