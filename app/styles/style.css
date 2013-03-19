@@ -398,3 +398,6 @@ table {
 /**
  * My style
  */
+.wrapper {
+  padding: 10px;
+}

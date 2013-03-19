@@ -6,6 +6,7 @@ require.config({
   baseUrl: 'scripts', // scripts folders
   // define where libs are
   paths: {
+    text:           'lib/text',
     zepto:          'lib/zepto',
     underscore:     'lib/underscore',
     backbone:       'lib/backbone',
