@@ -45,6 +45,6 @@ build/config/buildinfo.properties
 # npm
 node_modules
 
-# Bower. Maybe you should use it. ;)
-app/components
+# Bower.
+bower_components
 
