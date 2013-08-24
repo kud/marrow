@@ -7,7 +7,6 @@ What it doesn't do:
 
 - Magic code
 - Coffee
-- Not coding
 - Twiddling its thumbs
 
 What it does:
@@ -17,8 +16,18 @@ What it does:
 - Sass
 - Handlebars
 - Lodash
+- ... all you need to begin a great app
 
+## Installation
 
-    npm install
+``` npm install ```
 
-    bower install
+``` bower install ```
+
+## Development
+
+``` grunt ```
+
+## Distribution
+
+``` grunt dist ```

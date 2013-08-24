@@ -194,7 +194,7 @@ module.exports = function(grunt) {
           'src/styles/**/*.scss'
         ],
         tasks: [
-          'style:dev', 'notify:complete'
+          'styles:dev', 'notify:complete'
         ]
       },
       scripts: {
