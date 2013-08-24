@@ -178,8 +178,8 @@ module.exports = function(grunt) {
     // $ grunt watch
     watch: {
       options: {
-        interval: 5007, // try to reduce cpu
-        spawn: false // only needed for windows
+        //spawn: false, // only needed for windows
+        interval: 5007 // try to reduce cpu
       },
       assets: {
         files: [

@@ -33,3 +33,7 @@ Depending on ```node.js```, ```npm```, and ```Sass```.
 ## Distribution
 
 ``` $ grunt dist ```
+
+## Note
+
+I use jQuery as dependancy but if you only focus on Mobile app, you probably should use [Zepto](http://zeptojs.com/).
