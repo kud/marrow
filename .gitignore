@@ -45,6 +45,9 @@ build/config/buildinfo.properties
 # npm
 node_modules
 
-# Bower.
+# Bower
 bower_components
+
+# Global
+dist
 

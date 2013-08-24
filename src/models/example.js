@@ -1,17 +1,11 @@
-/**
- * Tweet
- * @type {Model}
- */
-define([
-    'backbone',
-    'moment',
-    'momentFr',
-    'helper'
-], function( Backbone, Moment, MomentFr, Helper ) {
+// http://backbonejs.org/#Model
+;(function(win, doc, app){
 
-    var Tweet = Backbone.Model.extend({
+  /**
+   * Example model
+   * @type {object}
+   */
+  app.models.Example = Backbone.Model.extend({
+  });
 
-    });
-
-    return Tweet;
-});
+})(window, window.document, window.app || (window.app = {}));

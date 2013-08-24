@@ -1,16 +1,12 @@
-/**
- * Tweets
- * @type {Collection}
- */
-define([
-    'backbone',
-    'helper',
-    'models/tweet'
-], function( Backbone, Helper, Tweet ) {
+// http://backbonejs.org/#Collection
+;(function(win, doc, app){
 
-    var Tweets = Backbone.Collection.extend({
+  /**
+   * Example collection
+   * @type {object}
+   */
+  app.collections.Example = Backbone.Collection.extend({
+    model: app.models.Example
+  });
 
-    });
-
-    return Tweets;
-});
+})(window, window.document, window.app || (window.app = {}));

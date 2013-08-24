@@ -5,10 +5,19 @@ module.exports = function(grunt) {
   // Import
   require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
 
+   if (grunt.file.exists('config.json')) {
+    var config = grunt.file.readJSON("config.json");
+  }
+  else {
+    grunt.log.error('Wow, wow, wow! Please, have a `config.json` for fuck\'s sake!');
+    process.exit(1);
+  }
+
   // Config
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
+    config: config,
 
     timestamp: new Date().getTime(),
     cachebuster: '.<%= timestamp %>',
@@ -29,7 +38,6 @@ module.exports = function(grunt) {
     // Clean dist folder
     clean: {
       all: ["dist/*"],
-      compiledImg: ['dist/img/pm-icon', 'dist/img/svg'],
       handlebars: ['src/templates/templates.js']
     },
 
@@ -100,29 +108,16 @@ module.exports = function(grunt) {
       }
     },
 
-    // Optimise svg
-    svgmin: {
-      dist: {
-        files: 'dist/img/svg/*.svg'
-      },
-      source: {
-        files: 'src/assets/img/svg/*.svg'
-      },
-      font: {
-        files: 'dist/font/*.svg'
-      }
-    },
-
     // Compile templates
     handlebars: {
       options: {
         namespace: "jst",
         wrapped: true,
         processName: function(filename) {
-          var pieces = filename.split("/");
-          var anotherPieces = pieces[pieces.length - 1].split(".");
+          var piece = filename.split("/");
+          var anotherPiece = piece[piece.length - 1].split(".");
 
-          return anotherPieces[0];
+          return anotherPiece[0];
         }
       },
       compile: {
@@ -132,36 +127,60 @@ module.exports = function(grunt) {
       }
     },
 
-    // Compass rocks
-    compass: {
+
+    // Sass makes your style amazing
+    sass: {
+      options: {
+        require: [],
+        sourcemap: true
+      },
       dev: {
         options: {
-          sassDir: 'src/styles',
-          cssDir: 'dist/css',
-          outputStyle: 'expanded',
-          noLineComments: false,
-          force: false,
-          imagesDir: 'dist/img',
-          fontsDir: 'font',
-          relativeAssets: true
-        }
+          style: 'expanded',
+          lineNumbers: true
+        },
+        files: '<%= config.styles %>'
       },
       dist: {
         options: {
-          sassDir: 'src/styles',
-          cssDir: 'dist/css',
-          outputStyle: 'compressed',
-          noLineComments: true,
-          force: true,
-          imagesDir: 'dist/img',
-          fontsDir: 'font',
-          relativeAssets: true
+          style: 'compressed',
+          lineNumbers: false
+        },
+        files: '<%= config.styles %>'
+      }
+    },
+
+    // Merge JavaScript
+    concat: {
+      scripts: {
+        files: '<%= config.scripts %>'
+      }
+    },
+
+    // Minify JavaScript
+    uglify: {
+      scripts: {
+        files: '<%= config.scripts %>'
+      }
+    },
+
+    // server
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          base: 'dist',
+          hostname: ''
         }
       }
     },
 
     // $ grunt watch
     watch: {
+      options: {
+        interval: 5007, // try to reduce cpu
+        spawn: false // only needed for windows
+      },
       assets: {
         files: [
           'src/assets/**'
@@ -170,7 +189,7 @@ module.exports = function(grunt) {
           'assets', 'notify:complete'
         ]
       },
-      compass: {
+      styles: {
         files: [
           'src/styles/**/*.scss'
         ],
@@ -178,39 +197,34 @@ module.exports = function(grunt) {
           'style:dev', 'notify:complete'
         ]
       },
-      requirejs: {
+      scripts: {
         files: [
-          'src/*.js',
-          'src/collections/*.js',
-          'src/models/*.js',
-          'src/routers/*.js',
-          'src/templates/*.handlebars',
-          'src/views/**/*.js',
-          'src/lib/**/*.js'
+          'src/**/*.js'
         ],
         tasks: [
-          'app:dev', 'notify:complete'
+          'scripts:dev', 'notify:complete'
         ]
+      },
+      livereload: {
+        options: {
+          livereload: true,
+        },
+        files: ['dist/**/*.*'],
+        tasks: ['notify:complete']
       }
     }
   });
 
   // Tasks
-  grunt.registerTask('default',           ['dev', 'watch']);
-  grunt.registerTask('dist',              ['clean:all', 'copy:assets', 'fontcustom:dist', 'compass:dist', 'clean:compiledImg', 'r.js:dist', 'imagemin:dist', 'replace:versionProd', 'notify:complete']);
-  grunt.registerTask('dev',               ['clean:all', 'copy:assets', 'fontcustom:dist', 'compass:dev', 'clean:compiledImg', 'r.js:dev', 'replace:versionDev', 'notify:complete']);
-  grunt.registerTask('assets',            ['copy:assets', 'replace:versionDev']);
-  grunt.registerTask('app:dev',           ['r.js:dev']);
-  grunt.registerTask('style:dev',         ['assets', 'compass:dev']);
+  grunt.registerTask('default',             ['dev', 'connect:server', 'watch']);
+  grunt.registerTask('dist',                ['clean:all', 'copy:assets', 'sass:dist', 'scripts:dist', 'imagemin:dist', 'replace:versionProd', 'notify:complete']);
+  grunt.registerTask('dev',                 ['clean:all', 'copy:assets', 'sass:dev', 'scripts:dev', 'replace:versionDev', 'notify:complete']);
+  grunt.registerTask('assets',              ['copy:assets', 'replace:versionDev']);
+  grunt.registerTask('styles:dev',          ['assets', 'sass:dev']);
 
   // Dependances
-  grunt.registerTask('r.js:dev',          ['handlebars:compile', 'requirejs:dev', 'clean:handlebars']);
-  grunt.registerTask('r.js:dist',         ['handlebars:compile', 'requirejs:dist', 'clean:handlebars']);
-
-  // Rename
-  grunt.registerTask('fontcustom:dist',   ['shell:fontcustom', 'svgmin:font']);
-  grunt.registerTask('server',            ['shell:server']);
-  grunt.registerTask('new',               ['shell:newFiles']);
+  grunt.registerTask('scripts:dev',         ['handlebars:compile', 'concat:scripts', 'clean:handlebars']);
+  grunt.registerTask('scripts:dist',        ['handlebars:compile', 'uglify:scripts', 'clean:handlebars']);
 
   // grunt.registerTask('testFiles', 'Task which tests if all embedded files are here.', function() {
   //   var isError = false;

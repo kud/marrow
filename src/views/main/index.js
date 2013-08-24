@@ -1,53 +1,28 @@
-/**
- * @description Static pages
- * @return {object} StaticView
- */
-define([
-    'zepto',
-    'backbone'
-], function( $, Backbone ) {
+// http://backbonejs.org/#View
+;(function(win, doc, app){
 
-    return Backbone.View.extend({
+  /**
+   * Main View
+   * @type {object}
+   */
+  app.views.Main = Backbone.View.extend({
 
-        el: '#content',
+    el: 'body',
 
-        template: this['jst'],
+    template: this['jst']['main-index'],
 
-        /**
-         * Render
-         * @return {object} Backbone.View
-         */
-        render: function() {
-            this.$el.html(this.template);
-            return this;
-        },
+    events: {
+    },
 
-        /**
-         * Legal stuff
-         * @return {void}
-         */
-        showAbout: function() {
-            this.template = this.template['static-about'];
-            this.render();
-        },
+    initialize: function() {
+    },
 
-        /**
-         * Setttings
-         * @return {void}
-         */
-        showSettings: function() {
-            this.template = this.template['static-settings'];
-            this.render();
-        },
+    render: function() {
+      this.$el.html(this.template);
 
-        /**
-         * What plateforms currently work for this application
-         * @return {void}
-         */
-        showSupportedplatforms: function() {
-            this.template = this.template['static-supported-platforms'];
-            this.render();
-        }
-    });
+      return this;
+    }
+  });
 
-});
+
+})(window, window.document, window.app || (window.app = {}));

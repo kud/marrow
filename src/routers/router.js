@@ -1,56 +1,54 @@
-/**
- * Routing
- */
-define([
-    'views/static/index'
-], function(
-    StaticView
-    ) {
+// http://backbonejs.org/#Router
+;(function(win, doc, app){
+
+  /**
+   * Router
+   * @type {object}
+   */
+  app.routers.Router = Backbone.Router.extend({
+
+    routes: {
+      '': 'root',
+      '*path': 'redirect404' // ALWAYS MUST BE THE LAST ROUTE
+    },
 
     /**
-     * It's all about routing
-     * @type {Backbone.Router}
+     * Router init
+     * @return {void}
      */
-    return Backbone.Router.extend({
+    initialize: function() {
+    },
 
-        routes: {
-            '': 'root',
+    /**
+     * Used before every action
+     * @return {void}
+     */
+    before: function() {
+    },
 
+    /**
+     * Used after every action
+     * @return {void}
+     */
+    after: function() {
+    },
 
-            '*path': 'redirect404' // ALWAYS MUST BE THE LAST ROUTE
-        },
+    /**
+     * @return {void}
+     */
+    root: function() {
+      app.views.instances.Main = new app.views.Main();
+      app.views.instances.Main.render();
+    },
 
-        /**
-         * Route init
-         * @return {void}
-         */
-        initialize: function() {
+    /**
+     * Used when a page isn't found
+     * @return {void}
+     */
+    redirect404: function() {
 
-        },
+    }
 
-        /**
-         * Used before every action
-         * @return {void}
-         */
-        before: function() {
+  });
 
-        },
-
-        /**
-         * Used after every action
-         * @return {void}
-         */
-        after: function() {
-
-        },
-
-        /**
-         * @return {void}
-         */
-        root: function() {
-
-        }
-
-    });
-
-});
+})(window, window.document, window.app || (window.app = {}));

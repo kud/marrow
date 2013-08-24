@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "dist/scripts/first.js": [
+      "src/first.js"
+    ],
+    "dist/scripts/libs.js":  [
+      "bower_components/lodash/lodash.js",
+      "bower_components/jquery/jquery.js",
+      "bower_components/handlebars.js/dist/handlebars.js",
+      "bower_components/backbone/backbone.js",
+      "src/libs/*.js"
+    ],
+    "dist/scripts/main.js": [
+      "src/bootstrap.js",
+      "src/models/**/*.js",
+      "src/collections/**/*.js",
+      "src/templates/templates.js",
+      "src/views/**/*.js",
+      "src/routers/**/*.js",
+      "src/main.js"
+    ]
+  },
+  "styles": [
+    {
+      "expand": true,
+      "cwd": "src/styles/",
+      "src": ["*.scss"],
+      "dest": "dist/styles/",
+      "ext": ".css"
+    }
+  ]
+}
