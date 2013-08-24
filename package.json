@@ -1,6 +1,6 @@
 {
   "name": "Marrow",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Marrow",
   "devDependencies": {
     "grunt": "~0.4.1",
