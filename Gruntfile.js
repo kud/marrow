@@ -5,7 +5,8 @@ module.exports = function(grunt) {
   // Import
   require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
 
-   if (grunt.file.exists('config.json')) {
+  // Check if config.json exists
+  if (grunt.file.exists('config.json')) {
     var config = grunt.file.readJSON("config.json");
   }
   else {
