@@ -20,14 +20,16 @@ What it does:
 
 ## Installation
 
-``` npm install ```
+Depending on ```node.js```, ```npm```, and ```Sass```.
 
-``` bower install ```
+``` $ npm install ```
+
+``` $ bower install ```
 
 ## Development
 
-``` grunt ```
+``` $ grunt ```
 
 ## Distribution
 
-``` grunt dist ```
+``` $ grunt dist ```
