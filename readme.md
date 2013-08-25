@@ -1,7 +1,7 @@
 Marrow
 ======
 
-Marrow is a kinda framework for Backbone.js.
+Marrow is a boilerplate for Backbone.js.
 
 What it doesn't do:
 
