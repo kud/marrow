@@ -5,7 +5,7 @@
    * Router
    * @type {object}
    */
-  app.routers.Router = Backbone.Router.extend({
+  app.Routers.Router = Backbone.Router.extend({
 
     routes: {
       '': 'root',
@@ -37,8 +37,8 @@
      * @return {void}
      */
     root: function() {
-      app.views.instances.Main = new app.views.Main();
-      app.views.instances.Main.render();
+      this.MainView = new app.Views.Main();
+      this.MainView.render();
     },
 
     /**

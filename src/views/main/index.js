@@ -5,7 +5,7 @@
    * Main View
    * @type {object}
    */
-  app.views.Main = Backbone.View.extend({
+  app.Views.Main = Backbone.View.extend({
 
     el: 'body',
 

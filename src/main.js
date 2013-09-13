@@ -6,7 +6,7 @@
   var $doc = $(doc);
 
   $doc.ready(function() {
-    app.routers.instances.Router = new app.routers.Router();
+    var Router = new app.Routers.Router();
     Backbone.history.start();
   });
 

@@ -5,8 +5,8 @@
    * Example collection
    * @type {object}
    */
-  app.collections.Example = Backbone.Collection.extend({
-    model: app.models.Example
+  app.Collections.Example = Backbone.Collection.extend({
+    model: app.Models.Example
   });
 
 })(window, window.document, window.app || (window.app = {}));

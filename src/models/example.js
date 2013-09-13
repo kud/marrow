@@ -5,7 +5,7 @@
    * Example model
    * @type {object}
    */
-  app.models.Example = Backbone.Model.extend({
+  app.Models.Example = Backbone.Model.extend({
   });
 
 })(window, window.document, window.app || (window.app = {}));
