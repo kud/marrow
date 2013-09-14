@@ -27,11 +27,15 @@
 
 ### NPM
 
-``` $ npm install ```
+```
+$ npm install
+```
 
 ### Bower
 
-``` $ bower install ```
+```
+$ bower install
+```
 
 ## Development
 
