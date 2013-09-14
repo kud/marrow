@@ -4,9 +4,9 @@
 
 ## Not included:
 
-- Magic code (oh noooes!)
-- Coffee (Bad for your heart anyway)
-- Give you the opportunity to twiddling your thumbs (Sorry buddy)
+- Magic code (*oh noooes!*)
+- Coffee (*bad for your heart anyway*)
+- Give you the opportunity to twiddling your thumbs (*sorry buddy*)
 
 ## Included:
 
@@ -20,9 +20,16 @@
 
 ## Install
 
-Requirements: ```node.js```, ```npm```.
+### Requirements
+
+- ```node.js```
+- ```npm```
+
+### NPM
 
 ``` $ npm install ```
+
+### Bower
 
 ``` $ bower install ```
 
