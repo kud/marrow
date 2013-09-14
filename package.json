@@ -1,30 +1,42 @@
 {
   "name": "Marrow",
-  "version": "0.1.0",
-  "description": "Marrow",
+  "version": "0.2.0",
+  "description": "Marrow is a boilerplate for backbone.js",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-handlebars": "~0.5.10",
-    "grunt-contrib-watch": "~0.5.1",
-    "grunt-contrib-imagemin": "~0.1.4",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-connect": "~0.3.0",
-    "grunt-notify": "~0.2.4",
-    "grunt-replace": "~0.4.4",
-    "grunt-sass": "~0.6.1",
-    "matchdep": "~0.1.2"
+    "grunt": "~0.4.*",
+    "grunt-contrib-copy": "~0.4.*",
+    "grunt-contrib-clean": "~0.5.*",
+    "grunt-contrib-handlebars": "~0.5.*",
+    "grunt-contrib-watch": "~0.5.*",
+    "grunt-contrib-imagemin": "~0.1.*",
+    "grunt-contrib-concat": "~0.3.*",
+    "grunt-contrib-uglify": "~0.2.*",
+    "grunt-concurrent": "~0.3.*",
+    "grunt-sass": "~0.6.*",
+    "grunt-shell": "~0.3.*",
+    "grunt-notify": "~0.2.*",
+    "grunt-replace": "~0.4.*",
+    "grunt-svgmin": "~0.2.*",
+    "grunt-contrib-jshint": "~0.6.*",
+    "load-grunt-tasks": "~0.1.*",
+    "glob": "~3.2.*",
+    "grunt-contrib-connect": "~0.5.0"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/kud/marrow.git"
   },
   "keywords": [
-    "backbone"
+    "backbone",
+    "lodash",
+    "grunt",
+    "libsass",
+    "handlebars",
+    "jquery",
+    "zepto",
+    "boilerplate"
   ],
   "author": "Erwann Mest",
   "license": "BSD",
-  "readmeFilename": "readme.md"
+  "readmeFilename": "README.md"
 }

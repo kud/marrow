@@ -9,7 +9,7 @@
 
     el: 'body',
 
-    template: this['jst']['main-index'],
+    template: this.jst['main-index'],
 
     events: {
     },

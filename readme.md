@@ -1,26 +1,26 @@
-Marrow
-======
+# Marrow
 
-Marrow is a boilerplate for backbone.js.
+**Marrow** is a boilerplate for **backbone.js**.
 
-What it doesn't do:
+## Not included:
 
-- Magic code
-- Coffee
-- Twiddling its thumbs
+- Magic code (oh noooes!)
+- Coffee (Bad for your heart anyway)
+- Give you the opportunity to twiddling your thumbs (Sorry buddy)
 
-What it does:
+## Included:
 
-- Give you a structure
-- Grunt
-- Sass
-- Handlebars
-- Lodash
-- ... all you need to begin a great app
+- A structure
+- A great compilation process via Grunt
+- Easy styling via libsass (so fast!)
+- Templating via handlebars
+- Lo-Dash instead of underscore for performance!
+- An HTTP server
+- ... all you need to begin a great app and being happy
 
-## Installation
+## Install
 
-Depending on ```node.js```, ```npm```, and ```Sass```.
+Requirements: ```node.js```, ```npm```.
 
 ``` $ npm install ```
 
@@ -28,11 +28,15 @@ Depending on ```node.js```, ```npm```, and ```Sass```.
 
 ## Development
 
-``` $ grunt ```
+```
+$ grunt
+```
 
 ## Distribution
 
-``` $ grunt dist ```
+```
+$ grunt dist
+```
 
 ## Note
 

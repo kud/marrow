@@ -4,7 +4,7 @@
       "src/first.js"
     ],
     "dist/scripts/libs.js":  [
-      "bower_components/lodash/lodash.js",
+      "bower_components/lodash/dist/lodash.compat.js",
       "bower_components/jquery/jquery.js",
       "bower_components/handlebars.js/dist/handlebars.js",
       "bower_components/backbone/backbone.js",
