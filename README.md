@@ -6,7 +6,7 @@
 
 - Magic code *oh noooes!*
 - Coffee *bad for your heart anyway*
-- Give you the opportunity to twiddling your thumbs *sorry buddy*
+- Give you the opportunity to twiddle your thumbs *sorry buddy*
 
 ## Included:
 
