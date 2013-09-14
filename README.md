@@ -4,15 +4,15 @@
 
 ## Not included:
 
-- Magic code (*oh noooes!*)
-- Coffee (*bad for your heart anyway*)
-- Give you the opportunity to twiddling your thumbs (*sorry buddy*)
+- Magic code *oh noooes!*
+- Coffee *bad for your heart anyway*
+- Give you the opportunity to twiddling your thumbs *sorry buddy*
 
 ## Included:
 
 - A structure
 - A great compilation process via Grunt
-- Easy styling via libsass (so fast!)
+- Easy styling via libsass *so fast!*
 - Templating via handlebars
 - Lo-Dash instead of underscore for performance!
 - An HTTP server
