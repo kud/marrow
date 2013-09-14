@@ -25,6 +25,12 @@
 - ```node.js```
 - ```npm```
 
+### Git clone
+
+```
+$ git clone https://github.com/kud/marrow.git
+```
+
 ### NPM
 
 ```
