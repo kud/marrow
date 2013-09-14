@@ -4,9 +4,9 @@
 
 ## Not included:
 
-- Magic code (_oh noooes!_)
-- Coffee (_bad for your heart anyway_)
-- Give you the opportunity to twiddling your thumbs (_sorry buddy_)
+- Magic code (*oh noooes!*)
+- Coffee (*bad for your heart anyway*)
+- Give you the opportunity to twiddling your thumbs (*sorry buddy*)
 
 ## Included:
 
