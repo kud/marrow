@@ -7,9 +7,9 @@
    */
   app.Views.Main = Backbone.View.extend({
 
-    el: 'body',
+    el: '#main',
 
-    template: this.jst['main-index'],
+    template: this.jst.main,
 
     events: {
     },

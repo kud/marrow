@@ -2,7 +2,7 @@
 module.exports = {
   options: {
     //spawn: false, // only needed for windows
-    interval: 5007 // try to reduce cpu
+    //interval: 5007 // reduce cpu when watching but also make lags
   },
   assets: {
     files: [
@@ -14,14 +14,14 @@ module.exports = {
     files: [
       'src/styles/**/*.scss'
     ],
-    tasks: ['copy:assets', 'replace:dev', 'styles:dev']
+    tasks: ['styles:dev']
   },
   scripts: {
     files: [
       'src/**/*.{js,handlebars}',
       '!src/templates/templates.js'
     ],
-    tasks: ['scripts:dev']
+    tasks: ['newer:jshint:dev', 'scripts:dev']
   },
   livereload: {
     options: {
