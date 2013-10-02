@@ -79,7 +79,7 @@ module.exports = function(grunt) {
   grunt.registerTask('copy:cachebuster',  ['copy:cachebuster-css', 'copy:cachebuster-css-map', 'copy:cachebuster-js', 'clean:no-cachebuster'])
 
   // Custom tasks
-  grunt.registerTask("config:check", 'Test if all embedded files are here.', function() {
+  grunt.registerTask("config:check", 'Check if all embedded files are here.', function() {
     var isError = false
 
     grunt.util._.each(grunt.config.data.config.scripts, function(collection) {
@@ -94,7 +94,7 @@ module.exports = function(grunt) {
     })
 
     if(isError) {
-      grunt.fail.warn('Please, check your config.json, some files are dead.')
+      grunt.fail.warn('Please, check your `config.json, some files are dead.')
     }
   })
 }
