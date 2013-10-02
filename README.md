@@ -2,13 +2,13 @@
 
 **Marrow** is a boilerplate for **backbone.js**.
 
-## Not included:
+### Not included:
 
 - Magic code *oh noooes!*
 - Coffee *bad for your heart anyway*
 - Give you the opportunity to twiddle your thumbs *sorry buddy*
 
-## Included:
+### Included:
 
 - A structure
 - A great compilation process via Grunt
@@ -17,6 +17,34 @@
 - Lo-Dash instead of underscore for performance!
 - An HTTP server
 - ... all you need to begin a great app and being happy
+
+## Explanation
+
+```shell
+.
+├── Gruntfile.js
+├── README.md
+├── bin
+├── bower.json
+├── bower_components // folder when you'll find all packages you install via bower install
+├── config.json
+├── dist // final files
+├── grunt_tasks // where all grunt tasks are defined
+│   └── options
+├── package.json
+└── src // where you code
+    ├── assets // static files
+    ├── bootstrap.js
+    ├── collections // http://backbonejs.org/#Collection
+    ├── first.js // if a script needs to be at the begin of the website
+    ├── libs
+    ├── main.js // $(document).ready
+    ├── models // http://backbonejs.org/#Model
+    ├── routers // http://backbonejs.org/#Router
+    ├── styles // http://sass-lang.com/
+    ├── templates // http://handlebarsjs.com/
+    └── views // http://backbonejs.org/#View
+```
 
 ## Install
 
@@ -47,9 +75,17 @@ $ bower install
 
 ## Development
 
+### Watch mode
+
 ```
 $ grunt
 ```
+
+### Classic mode
+
+```
+$ grunt dev
+``
 
 ## Distribution
 
