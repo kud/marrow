@@ -37,8 +37,12 @@
      * @return {void}
      */
     root: function() {
-      this.MainView = new app.Views.Main();
-      this.MainView.render();
+      this.before()
+
+      app.Views.Instances.rootIndex = new app.Views.RootIndex()
+      app.Views.Instances.rootIndex.render()
+
+      this.after()
     },
 
     /**
@@ -46,9 +50,9 @@
      * @return {void}
      */
     redirect404: function() {
-
+      console.log('Oops, 404!')
     }
 
-  });
+  })
 
-})(window, window.document, window.app || (window.app = {}));
+})(window, window.document, window.app || (window.app = {}))

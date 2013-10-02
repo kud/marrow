@@ -3,10 +3,15 @@
  */
 ;(function(win, doc, app){
 
-  app.Models = {};
-  app.Collections = {};
-  app.Views = {};
-  app.Routers = {};
-  app.Events = {};
+  app.Models = {}
+  app.Models.Instances = {}
+  app.Collections = {}
+  app.Collections.Instances = {}
+  app.Views = {}
+  app.Views.Instances = {}
+  app.Routers = {}
+  app.Routers.Instances = {}
+  app.Events = {}
+  app.Events.Instances = {}
 
-})(window, window.document, window.app || (window.app = {}));
+})(window, window.document, window.app || (window.app = {}))

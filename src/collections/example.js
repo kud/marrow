@@ -7,6 +7,6 @@
    */
   app.Collections.Example = Backbone.Collection.extend({
     model: app.Models.Example
-  });
+  })
 
-})(window, window.document, window.app || (window.app = {}));
+})(window, window.document, window.app || (window.app = {}))

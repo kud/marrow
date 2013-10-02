@@ -6,6 +6,6 @@
    * @type {object}
    */
   app.Models.Example = Backbone.Model.extend({
-  });
+  })
 
-})(window, window.document, window.app || (window.app = {}));
+})(window, window.document, window.app || (window.app = {}))

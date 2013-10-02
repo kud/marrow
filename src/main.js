@@ -3,11 +3,11 @@
  */
 ;(function(win, doc, app){
 
-  var $doc = $(doc);
+  var $doc = $(doc)
 
   $doc.ready(function() {
-    var Router = new app.Routers.Router();
-    Backbone.history.start();
-  });
+    app.Routers.Instances.router = new app.Routers.Router()
+    Backbone.history.start({pushState: true})
+  })
 
-})(window, window.document, window.app || (window.app = {}));
+})(window, window.document, window.app || (window.app = {}))

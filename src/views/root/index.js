@@ -2,10 +2,10 @@
 ;(function(win, doc, app){
 
   /**
-   * Main View
+   * Root View
    * @type {object}
    */
-  app.Views.Main = Backbone.View.extend({
+  app.Views.RootIndex = Backbone.View.extend({
 
     el: '#main',
 
@@ -18,11 +18,11 @@
     },
 
     render: function() {
-      this.$el.html(this.template);
+      this.$el.html(this.template)
 
-      return this;
+      return this
     }
-  });
+  })
 
 
-})(window, window.document, window.app || (window.app = {}));
+})(window, window.document, window.app || (window.app = {}))

@@ -16,6 +16,7 @@
 - Templating via handlebars
 - Lo-Dash instead of underscore for performance!
 - An HTTP server
+- pushState
 - ... all you need to begin a great app and being happy
 
 ## Explanation
@@ -53,7 +54,7 @@
 - ```node.js```
 - ```npm```
 
-Easy way on Mac OS X: ```brew install node``
+Easy way on Mac OS X: ```brew install node```
 
 ### Then
 
@@ -85,7 +86,7 @@ $ grunt
 
 ```
 $ grunt dev
-``
+```
 
 ## Distribution
 
