@@ -1,6 +1,6 @@
 {
   "name": "marrow",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "devDependencies": {
     "lodash": "~2.0.*",
     "backbone": "~1.0.*",
