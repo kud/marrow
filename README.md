@@ -37,7 +37,7 @@
     ├── assets // static files
     ├── bootstrap.js
     ├── collections // http://backbonejs.org/#Collection
-    ├── first.js // if a script needs to be at the begin of the website
+    ├── first.js // if a script needs to be at the beginning of the website
     ├── libs
     ├── main.js // $(document).ready
     ├── models // http://backbonejs.org/#Model
