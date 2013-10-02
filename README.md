@@ -25,19 +25,21 @@
 - ```node.js```
 - ```npm```
 
-### Git clone
+Easy way on Mac OS X: ```brew install node``
+
+### First of all
 
 ```
 $ git clone https://github.com/kud/marrow.git
 ```
 
-### NPM
+### Node dependencies
 
 ```
 $ npm install
 ```
 
-### Bower
+### Bower dependencies
 
 ```
 $ bower install
@@ -57,4 +59,4 @@ $ grunt dist
 
 ## Note
 
-I use jQuery as dependancy but if you only focus on Mobile app, you probably should use [Zepto](http://zeptojs.com/).
+I use jQuery as dependency but if you only focus on Mobile app, you probably should use [Zepto](http://zeptojs.com/) or have a look to [Backbone.Native](https://github.com/inkling/backbone.native).
