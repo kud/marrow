@@ -27,7 +27,7 @@
 
 Easy way on Mac OS X: ```brew install node``
 
-### First of all
+### Then
 
 ```
 $ git clone https://github.com/kud/marrow.git
