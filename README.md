@@ -27,7 +27,7 @@
 ├── README.md
 ├── bin
 ├── bower.json
-├── bower_components // folder when you'll find all packages you install via bower install
+├── bower_components // folder where you'll find all packages you install via bower install
 ├── config.json
 ├── dist // final files
 ├── grunt_tasks // where all grunt tasks are defined
