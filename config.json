@@ -12,6 +12,7 @@
     ],
     "dist/scripts/main.js": [
       "src/bootstrap.js",
+      "src/events/**/*.js",
       "src/models/**/*.js",
       "src/collections/**/*.js",
       "src/templates/templates.js",

@@ -1,9 +1,9 @@
 {
   "name": "marrow",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "devDependencies": {
-    "lodash": "~2.0.*",
-    "backbone": "~1.0.*",
+    "lodash": "~2.3.*",
+    "backbone": "~1.1.*",
     "handlebars.js": "~1.0.*",
     "normalize-css": "~2.1.*",
     "jquery": "~2.0.*"

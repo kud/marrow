@@ -1,11 +1,11 @@
-;(function(win, doc, app){
+;(function(win, doc, App){
 
   /**
    * Main View
    * You can define here what you want for any pages
    * @type {object}
    */
-  app.Views.Main = Backbone.View.extend({
+  App.Views.Main = Backbone.View.extend({
 
     el: 'html',
 
@@ -25,7 +25,7 @@
 
       doc.title = title
 
-      app.Routers.Instances.router.navigate(url, true)
+      App.Routers.Instances.router.navigate(url, true)
     }
   });
 

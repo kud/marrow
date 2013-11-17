@@ -1,12 +1,12 @@
 // http://backbonejs.org/#Collection
-;(function(win, doc, app){
+;(function(win, doc, App){
 
   /**
    * Example collection
    * @type {object}
    */
-  app.Collections.Example = Backbone.Collection.extend({
-    model: app.Models.Example
+  App.Collections.Examples = Backbone.Collection.extend({
+    model: App.Models.Example
   })
 
 })(window, window.document, window.app || (window.app = {}))

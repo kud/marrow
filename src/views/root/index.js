@@ -1,11 +1,11 @@
 // http://backbonejs.org/#View
-;(function(win, doc, app){
+;(function(win, doc, App){
 
   /**
    * Root View
    * @type {object}
    */
-  app.Views.RootIndex = Backbone.View.extend({
+  App.Views.RootIndex = Backbone.View.extend({
 
     el: '#main',
 

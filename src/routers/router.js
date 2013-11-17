@@ -1,11 +1,11 @@
 // http://backbonejs.org/#Router
-;(function(win, doc, app){
+;(function(win, doc, App){
 
   /**
    * Router
    * @type {object}
    */
-  app.Routers.Router = Backbone.Router.extend({
+  App.Routers.Router = Backbone.Router.extend({
 
     routes: {
       '': 'root',
@@ -39,8 +39,8 @@
     root: function() {
       this.before()
 
-      app.Views.Instances.rootIndex = new app.Views.RootIndex()
-      app.Views.Instances.rootIndex.render()
+      App.Views.Instances.rootIndex = new App.Views.RootIndex()
+      App.Views.Instances.rootIndex.render()
 
       this.after()
     },

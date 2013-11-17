@@ -31,7 +31,7 @@ module.exports = {
   },
   compile: {
     files: {
-      'src/templates/templates.js': 'src/templates/*.handlebars'
+      'src/templates/templates.js': 'src/templates/*.hbs'
     }
   }
 };

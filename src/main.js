@@ -1,12 +1,12 @@
 /**
  * This is where all begins
  */
-;(function(win, doc, app){
+;(function(win, doc, App){
 
   var $doc = $(doc)
 
   $doc.ready(function() {
-    app.Routers.Instances.router = new app.Routers.Router()
+    App.Routers.Instances.router = new App.Routers.Router()
     Backbone.history.start({pushState: true})
   })
 

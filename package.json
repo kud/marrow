@@ -1,6 +1,6 @@
 {
   "name": "Marrow",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Marrow is a boilerplate for backbone.js",
   "devDependencies": {
     "grunt": "~0.4.*",
